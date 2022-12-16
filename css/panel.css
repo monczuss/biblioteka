@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--fontSize: 18px;
+	--black: #000;
+	--white: #fff;
+	--red: rgb(246, 67, 67);
+	--green: rgb(0, 128, 0);
+	--mainColor: rgb(65, 219, 222);
+	--mainColor-hsla: hsla(181, 70%, 56%, 0.2);
+	--background: rgb(32, 32, 32);
+}
+
+html,
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: var(--background);
+	font-size: var(--fontSize);
+}
+
+.page-wrap {
+	overflow: hidden;
+}
+
+/* INFO CONTAINER */
+
+.info-container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 500px;
+	height: 100px;
+	margin: 0 auto;
+	padding-top: 10px;
+	background: rgba(20, 20, 20, 0.85);
+	border-radius: 0 0 0.5em 0.5em;
+	box-shadow: 2px 1px 5px black;
+}
+
+.info-container p {
+	font-size: 0.8em;
+	flex-basis: 51%;
+	color: var(--white);
+	text-align: center;
+}
+
+.info-container p b {
+	color: var(--mainColor);
+}
+
+.action-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 500px;
+	max-height: 200px;
+	margin: 50px auto;
+	padding-top: 10px;
+	background: rgba(20, 20, 20, 0.85);
+	border-radius: 0.5em;
+	box-shadow: 2px 1px 5px black;
+}
+
+.action-container h4 {
+	flex-basis: 100%;
+	text-align: center;
+	color: var(--white);
+}
+
+.action-container ul {
+	display: flex;
+	flex-basis: 80%;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	padding: 0;
+	margin: 20px auto;
+}
+
+.action-container ul li {
+	text-align: center;
+}
+
+.action-container ul li a {
+	display: inline-block;
+	background-color: var(--mainColor);
+	margin: 0 10px;
+	padding: 5px 8px;
+	min-width: 125px;
+	border-radius: 0.5em;
+	font-size: 0.7em;
+	text-decoration: none;
+	color: var(--white);
+}
+
+/* TABLE CONTAINER */
+
+.table-container {
+	max-width: 1000px;
+	max-height: 1000px;
+	background: rgba(20, 20, 20, 0.85);
+	border-radius: 0.5em;
+	padding: 30px 0;
+	box-shadow: 2px 1px 5px var(--black);
+	margin: 0 auto;
+}
+
+.table-container h3 {
+	text-align: center;
+	font-size: 0.9em;
+	color: var(--mainColor);
+}
+
+.table-container h5 {
+	margin-top: 5px;
+	text-align: center;
+	font-size: 0.7em;
+	color: var(--white);
+}
+
+.table-container table {
+	border-collapse: separate;
+	border-spacing: 0 1.5em;
+	margin: 0 auto;
+}
+
+.table-container table tr {
+	text-align: center;
+}
+
+.table-container table th {
+	padding: 3px;
+	color: var(--mainColor);
+}
+
+.table-container table td {
+	font-size: 0.8em;
+	color: var(--white);
+	padding: 0 3px;
+}
+
+.table-container table a {
+	color: var(--white);
+	font-size: 0.8em;
+	font-weight: bold;
+	padding: 5px;
+	text-decoration: none;
+	border-radius: 0.5em;
+}
+
+.table-container table .delete {
+	background-color: var(--red);
+}
+
+.table-container table .edit {
+	background-color: var(--green);
+}
+
+/* EDIT CONTAINER */
+
+.edit-container form {
+	min-width: 300px;
+	max-width: 450px;
+	padding: 20px;
+	margin: 0 auto;
+	background: rgba(20, 20, 20, 0.85);
+	border-radius: 0.5em;
+	box-shadow: 2px 1px 5px var(--black);
+}
+
+.edit-container form .form-group {
+	margin-bottom: 10px;
+}
+
+.edit-container form label {
+	color: var(--mainColor);
+	font-size: 0.8em;
+}
+
+.edit-container form input {
+	border: 1px solid #eee;
+	border-radius: 0.5em;
+	padding: 5px 8px;
+	color: var(--black);
+}
+
+.edit-container form .btn {
+	color: var(--white);
+	background-color: var(--mainColor);
+	font-size: 0.9em;
+	margin-top: 20px;
+	padding: 5px 8px;
+	transition: 0.7s ease-in-out;
+}
+
+.edit-container form .btn:hover {
+	background-color: var(--mainColor-hsla);
+}
+
+.edit-container form .message {
+	margin-top: 10px;
+	text-align: center;
+	font-size: 0.9em;
+}

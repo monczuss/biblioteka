@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--fontSize: 18px;
+	--black: #000;
+	--white: #fff;
+	--mainColor: rgb(65, 219, 222);
+	--mainColor-hsla: hsla(181, 70%, 56%, 0.2);
+	--background: rgb(17, 17, 17);
+}
+
+html,
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: var(--fontSize);
+	scroll-behavior: smooth;
+	background: rgb(17, 17, 17);
+	background: linear-gradient(90deg, rgba(17, 17, 17, 1) 0%, rgba(22, 22, 22, 1) 50%, rgba(17, 17, 17, 1) 100%);
+}
+
+/* GLOBAL */
+
+h5,
+h4,
+h3,
+h2,
+h1 {
+	text-align: center;
+	color: var(--white);
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.page-wrap {
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(8, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	height: 100vh;
+}
+
+span.line {
+	display: inline-block;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 200px;
+	height: 1px;
+	background-color: var(--mainColor);
+}
+
+/* NAV CONTAINER */
+
+.nav-container {
+	width: 100vw;
+	grid-area: 1 / 1 / 2 / 6;
+	display: flex;
+	justify-content: center;
+	padding: 30px 0;
+}
+
+.nav-container .logo {
+	flex-basis: 20%;
+	color: var(--mainColor);
+	margin-left: 40px;
+	transition: 0.5s;
+}
+
+.nav-container .logo img {
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+}
+
+.nav-container .nav-box {
+	display: flex;
+	justify-content: flex-start;
+	margin-right: 40px;
+	flex-basis: 80%;
+}
+
+.nav-container .nav-box .nav-ul {
+	display: flex;
+	align-items: center;
+}
+
+.nav-container .nav-ul li a {
+	color: var(--white);
+	margin: 18px 36px;
+	font-size: 0.7em;
+	letter-spacing: 0.1em;
+	font-weight: bold;
+	transition: 0.5s;
+}
+
+.nav-container .nav-ul li {
+	transition: 0.5s;
+}
+
+.nav-container .nav-ul li:hover a {
+	color: var(--mainColor);
+}
+
+/* ASIDE CONTAINER */
+
+.aside-container {
+	grid-area: 2 / 1 / 9 / 2;
+}
+
+.aside-container h4 {
+	margin-top: 10px;
+	font-size: 0.8em;
+}
+
+.aside-container h5 {
+	margin-top: 20px;
+	font-size: 0.9em;
+	color: var(--mainColor);
+}
+
+.aside-container table {
+	margin: 0 auto;
+}
+
+.aside-container table tr {
+	text-align: center;
+}
+
+.aside-container table th {
+	padding: 3px;
+	color: var(--mainColor);
+}
+
+.aside-container table td {
+	font-size: 0.8em;
+	color: var(--white);
+	padding: 0 3px;
+}
+
+/* MAIN CONTAINER */
+
+.main-container {
+	padding-top: 60px;
+	grid-area: 2 / 2 / 9 / 5;
+}
+
+.main-container h3 {
+	font-size: 1.3em;
+	margin-bottom: 40px;
+}
+
+.main-container form {
+	min-width: 300px;
+	max-width: 450px;
+	padding: 20px;
+	margin: 0 auto;
+	border-radius: 0.5em;
+	box-shadow: 3px 3px 23px -9px rgba(0, 0, 0, 0.86);
+}
+
+.main-container form .form-group {
+	margin-bottom: 10px;
+}
+
+.main-container form label {
+	color: var(--mainColor);
+	font-size: 0.8em;
+}
+
+.main-container form input {
+	border: 1px solid #eee;
+	border-radius: 0.5em;
+	padding: 5px 8px;
+	color: var(--black);
+}
+
+.main-container form .btn {
+	color: var(--white);
+	background-color: var(--mainColor);
+	font-size: 0.9em;
+	margin-top: 20px;
+	padding: 5px 8px;
+	transition: 0.7s ease-in-out;
+}
+
+.main-container form .btn:hover {
+	background-color: var(--mainColor-hsla);
+}
+
+.main-container form .pull-right {
+	float: right;
+}
+
+.main-container form .message {
+	margin-top: 10px;
+	text-align: center;
+	font-size: 0.9em;
+}
+
+/* FOOTER CONTAINER */
+
+.footer-container {
+	grid-area: 7 / 5 / 9 / 6;
+}
+
+.footer-container h3 {
+	margin-top: 10px;
+	font-size: 1.4em;
+}
+
+.footer-container p {
+	margin-top: 5px;
+	color: var(--white);
+	font-size: 0.8em;
+}
+
+.footer-container p span {
+	margin-left: 3px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.footer-container a {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	font-size: 0.8em;
+	margin-right: 5px;
+	text-decoration: none;
+	color: var(--mainColor);
+}
+
+/* RESPONSYWNOŚĆ */
+
+@media screen and (max-width: 1980px) {
+}
+
+@media screen and (max-width: 1700px) {
+}
+
+@media screen and (max-width: 1400px) {
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 860px) {
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape) {
+}
+
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 400px) {
+}

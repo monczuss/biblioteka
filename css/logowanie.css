@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--fontSize: 18px;
+	--white: #fff;
+	--red: rgb(246, 67, 67);
+	--mainColor: rgb(65, 219, 222);
+	--background: rgb(32, 32, 32);
+}
+
+html,
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: var(--background);
+	font-size: var(--fontSize);
+}
+
+.page-wrap {
+	overflow: hidden;
+}
+
+/* LOGIN CONTAINER */
+
+.login-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	padding: 40px;
+	transform: translate(-50%, -50%);
+	background: rgba(20, 20, 20, 0.85);
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+	border-radius: 0.5em;
+}
+
+.login-container h2 {
+	margin: 0 0 30px;
+	padding: 0;
+	color: var(--white);
+	text-align: center;
+}
+
+.login-container a {
+	position: absolute;
+	bottom: 3%;
+	right: 5%;
+	font-size: 0.6em;
+	text-decoration: none;
+	color: var(--white);
+	transition: 0.6s;
+}
+
+.login-container a:hover {
+	color: var(--mainColor);
+}
+
+.login-container form button {
+	position: relative;
+	display: inline-block;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 9px 8px;
+	color: var(--white);
+	font-size: 0.6em;
+	text-decoration: none;
+	background-color: var(--mainColor);
+	text-transform: uppercase;
+	overflow: hidden;
+	border: none;
+	border-radius: 0.5rem;
+	transition: 0.5s;
+	margin-top: 12px;
+	letter-spacing: 2px;
+}
+
+.login-container button:hover {
+	background: rgba(105, 123, 180, 0.5);
+	color: var(--white);
+	border-radius: 5px;
+}
+
+.login-container .user-box {
+	position: relative;
+}
+
+.login-container .user-box input {
+	width: 100%;
+	padding: 10px 0;
+	font-size: 0.9em;
+	color: var(--white);
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 1px solid var(--white);
+	outline: none;
+	background: transparent;
+}
+
+.login-container .user-box label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px 0;
+	font-size: 0.8em;
+	color: var(--white);
+	pointer-events: none;
+	transition: 0.5s;
+}
+
+.login-container .user-box span {
+	position: absolute;
+	top: 15%;
+	right: 5%;
+	color: var(--white);
+	transition: 0.6s;
+}
+
+.login-container .user-box span.color {
+	position: absolute;
+	top: 15%;
+	right: 5%;
+	color: var(--mainColor);
+	transition: 0.6s;
+}
+
+.login-container .user-box span:hover {
+	color: var(--mainColor);
+}
+
+.login-container .user-box input:focus ~ label,
+.login-container .user-box input:valid ~ label {
+	top: -20px;
+	left: 0;
+	color: var(--mainColor);
+	font-size: 12px;
+}
+
+.login-container .user-error p {
+	text-align: center;
+	font-size: 0.7em;
+	color: var(--red);
+}
